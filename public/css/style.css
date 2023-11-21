@@ -1,0 +1,290 @@
+.card-param {
+    height: auto;
+    margin-top: 50px
+}
+
+/* Results */
+
+#player-results1, #player-results2, #player-time-results1, #player-time-results2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.col1 {
+    border-right: 5px solid #1d7fa1;
+}
+
+.col2 {
+    border-left: 5px solid #c0345d;
+}
+
+nav {
+    background-color: #6c6059 !important;
+}
+
+button {
+    background-color: #6c6059;
+    color: white;
+}
+
+.card-quizz {
+    height: auto;
+    margin-top: 50px
+}
+
+#player-results-quizz1, #player-results-quizz2, #chrono-player1, #chrono-player2, #joueur1-add, #joueur1-remove, #joueur2-add, #joueur2-remove {
+    font-size: 25px;
+    font-weight: bold;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#joueur1-add, #joueur2-add {
+    color: green;
+}
+
+#joueur1-remove, #joueur2-remove {
+    color: red;
+}
+
+#chrono-player1, #chrono-player2 {
+    margin-top: 10px;
+}
+
+.card-quizz-question {
+    margin-top: 50px;
+    display: none;
+    min-height: 220px;
+    border-width: 2px;
+}
+
+.block-question {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+.response0, .response1, .response2, .response3 {
+    font-size: 30px;
+    background-color: #16c9c9 !important;
+    flex: 1;
+}
+
+.response-block {
+    width: fit-content;
+    margin: 30px auto 0;
+    display: none;
+}
+
+.start-btn {
+    margin: 30px auto;
+    width: fit-content;
+}
+
+.response-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.response-block .col {
+    flex: 1;
+    margin: 5px;
+    min-width: 0;
+}
+
+
+
+/**************** PAGE RULTATS **********************/
+
+.question-section {
+    background-color: rgba(171, 78, 104, 0.1);
+    padding: 30px 15px;
+    margin: 3px;
+}
+
+.question-section:nth-child(even) {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(17, 75, 95, 0.1);
+    text-align: right;
+}
+
+
+.question-container {
+    max-width: 70%;
+}
+
+.question-number {
+    text-align: center;
+    font-weight: bold;
+    color: #114B5F;
+}
+
+.question-number-2 {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #AB4E68;
+}
+
+.question-text {
+    margin-bottom: 20px;
+}
+
+.pourcentage {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pourcentage .score {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.score .number {
+    font-size: 300%;
+}
+
+
+.question-response {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.right {
+    float: right !important;
+}
+
+.result-end {
+    height: 100px;
+    text-align: center;
+    padding: 30px;
+}
+
+.player1 {
+    color: #1d7fa1;
+}
+
+.player2 {
+    color: #c0345d;
+}
+
+/****   OTHER ****/
+.btn.nok {
+    background-color: red !important;
+}
+
+.btn.ok {
+    background-color: green !important;
+}
+
+.red {
+    color: #c0345d;
+}
+
+.blue {
+    color: #1d7fa1;
+}
+
+.green {
+    color: green;
+}
+
+.first-border {
+    display: flex;
+    flex-direction: row;
+}
+
+.first-border div {
+    background-color: #6c6059;
+}
+
+.playerName {
+    text-align: center;
+}
+
+.first-panel {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 100%;
+}
+
+.parag {
+    width: 20%;
+    background-color: #d9d9d9;
+}
+
+.win {
+    width: fit-content;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 40px auto;
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.5), rgba(0, 128, 0, 0.5));
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-panel {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 100%;
+}
+
+.parag {
+    width: 20%;
+    background-color: #d9d9d9;
+    border-radius: 5em;
+}
+
+.explanation {
+    font-size: large;
+    text-align: center;
+    background-color: #8A817C;
+    justify-content: center;
+    width: 75%;
+    padding: 10px;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.percentage {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #c0345d;
+    background-color: #c4c0bd;
+    width: 75%;
+    margin-left: 15%;
+    margin-right: 5%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.texte {
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.position-text{
+    display: flex;
+    justify-content: end;
+}
