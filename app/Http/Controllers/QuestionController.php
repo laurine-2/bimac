@@ -9,7 +9,10 @@ class QuestionController extends Controller
 {
     public function awnserQuestion($sub_category){
         $listQuestion = Question::where("sub_category","=", $sub_category)->get();
-        return view("listQuestion")->with("listQuestion", $listQuestion);
+        return view("listQuestion")->with([
+            "listQuestion" => $listQuestion,
+        "subCategory" => $sub_category,
+        ]);
     }
     
 }

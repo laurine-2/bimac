@@ -14,8 +14,9 @@
 </head>
 <body>
 
-<form id="checkboxForm">
-    @foreach($listQuestion as $question)
+<form  method="POST" action="{{ route('quiz', ['sub_category' => $subCategory]) }}">
+    @csrf
+@foreach($listQuestion as $question)
         <div class="choc-data">
             <p class="explanation">{{ $question["description"] }}</p>
             <div>
@@ -33,17 +34,24 @@
 <script>
 function validateCheckboxes() {
     // Récupérer toutes les cases à cocher
-    var checkboxes = document.querySelectorAll('input[name="checkboxes[]"]:checked');
+    var checkboxes = document.querySelectorAll('input[name^="checkboxes["]:checked');
 
-    // Limiter la sélection à deux cases
-    if (checkboxes.length > 2) {
-        alert("Vous ne pouvez sélectionner que deux propositions.");
-        // Désélectionner la dernière case cochée
-        checkboxes[checkboxes.length - 2].checked = false;
-    } else {
-        // Soumettre le formulaire ou effectuer d'autres actions si nécessaire
-        document.getElementById('checkboxForm').submit();
+    // Limiter la sélection à deux cases par question
+    var questionIds = [];
+    for (var i = 0; i < checkboxes.length; i++) {
+        var checkbox = checkboxes[i];
+        var questionId = checkbox.name.match(/\[(\d+)\]/)[1];
+
+        if (questionIds.includes(questionId)) {
+            // Désélectionner la case cochée supplémentaire
+            checkbox.checked = false;
+        } else {
+            questionIds.push(questionId);
+        }
     }
+
+    // Soumettre le formulaire
+    document.getElementById('checkboxForm').submit();
 }
 </script>
 

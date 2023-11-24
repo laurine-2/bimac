@@ -26,5 +26,12 @@ class Question extends Model
          'explication',
         'value',
     ];
+
+    public function awnser()
+{
+    return $this->hasMany(Awnser::class); // awnser va nous permettre de recuperer les reponse dans la base de donné
+}
+
+    //protected $fillable = ['question', 'options', 'correct_option', 'reponses'];
 }
 

@@ -288,3 +288,59 @@ button {
     display: flex;
     justify-content: end;
 }
+
+body {
+    font-family: 'figtree', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #3498db;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.sidebar {
+    background-color: #3498db;
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+.btn {
+    font-size: 30px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #2980b9;
+}
